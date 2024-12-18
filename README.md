@@ -53,17 +53,15 @@ This repository contains a suite of Burp Suite extensions developed in Jython, d
 
 1. **Prerequisites**:
    - Burp Suite (Professional or Community Edition)
-   - Jython 2.7
-   - Python 2.7 (for Jython compatibility)
-   - Backend API (included in this repository) running on `http://localhost:8000`
+   - pip install -r the requirements.txt located in this project's root folder.
 
 2. **Download and import Jython standalone JAR file**:
 - Go to the Jython Downloads Page.
-- Download the standalone Jython .jar file (e.g., jython-standalone-2.7.4.jar).
+- Download the standalone Jython .jar file (e.g., jython-standalone-x.x.x.jar).
 - Open Burp Suite.
 - Go to the Extensions tab in Burp Suite.
 - Under the Options tab, scroll down to the Python Environment section.
-- Click Select File, and choose the jython-standalone-2.7.4.jar file you just downloaded.
+- Click Select File, and choose the jython-standalone-2.7.4.jar (for example) file you just downloaded.
 - Click Apply to load the Jython environment into Burp Suite.
 
 3. **Load the Extensions**:
@@ -73,15 +71,21 @@ This repository contains a suite of Burp Suite extensions developed in Jython, d
 
 ## Running the Backend API
 
-1. Navigate to the backend API folder in the repository.
-2. Install dependencies:
+1. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
+   
+2. Navigate to the backend API folder in the repository.
+```bash
+cd /open_source_burp_extention_suite/ai_attack_api/red_team_api
+```
+
 3. Run the backend server:
    ```bash
-   python app.py
+   python start_server
    ```
+   
 4. The API will be available at `http://localhost:8000`.
 
 ## Usage
