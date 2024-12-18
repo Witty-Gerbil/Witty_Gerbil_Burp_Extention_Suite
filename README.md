@@ -7,13 +7,13 @@ This repository contains a suite of Burp Suite extensions developed in Jython, d
 ### Extensions Included
 
 1. **Witty Prompt Augmenter**  
-   Enhances prompts by leveraging an external API to generate augmented versions for security testing purposes.
+   Generated prompt augmentations based on user requirements. Integrates with Intruder payload processor and payload generator. 
 
 2. **Witty Conversations**  
-   Facilitates conversational testing with LLMs, allowing users to interact dynamically while evaluating success criteria and managing context.
+   Facilitates conversational testing with LLMs, allowing users to interact dynamically while evaluating success criteria and managing context. Model to model attacks. 
 
 3. **Witty Transactions**  
-   Analyzes HTTP transactions, sending request/response pairs to an OpenAI API for detailed security analysis and threat detection.
+   Analyzes HTTP transactions; request/response pairs for detailed security analysis and threat detection.
 
 4. **Witty Analysis**  
    Provides analysis, scoring, benchmarking, and export functionalities for HTTP requests and responses processed through Burp Suite.
@@ -29,7 +29,7 @@ This repository contains a suite of Burp Suite extensions developed in Jython, d
 
 #### Witty Prompt Augmenter
 - **Intruder Payload Processor**: Automatically augment payloads for Burp Intruder attacks.
-- **Prompt Augmentation**: Generate various augmented prompts using API calls.
+- **Intruder Payload Generator**: After generating x number of augments in the custom tab, send them over to Intruder to use in your attack. 
 - **Custom Tab**: UI for configuring augmentation settings and submitting prompts.
 
 #### Witty Conversations
@@ -39,15 +39,12 @@ This repository contains a suite of Burp Suite extensions developed in Jython, d
 - **Logging**: View detailed logs of each conversation step.
 
 #### Witty Transactions
-- **Threat Analysis**: Analyze HTTP transactions for potential threats using OpenAI models.
-- **API Key Management**: Set and manage OpenAI API keys within the UI.
+- **Threat Analysis**: Analyze HTTP transactions for potential threats.
 - **Detailed Results**: Display detailed analyses and threat levels for each transaction.
 
 #### Witty Analysis
-- **Scoring and Benchmarking**: Score requests/responses and run benchmarks to evaluate security effectiveness.
+- **Scoring and Benchmarking**: Score requests/responses and run benchmarks to evaluate chatbot interactions.
 - **Export Functionality**: Export results in CSV, Excel, or Parquet formats.
-- **Visualization**: Pie charts and tables for visualizing pass/fail distributions and other metrics.
-- **Redaction**: Redact sensitive headers before analysis.
 
 ## Installation
 
@@ -92,8 +89,8 @@ cd /open_source_burp_extention_suite/ai_attack_api/red_team_api
 
 1. **Witty Prompt Augmenter**:
    - Highlight a payload in Burp Suite.
-   - Right-click and select **"Send to Prompt Augmentor as base prompt"**.
    - Configure settings in the **Witty Prompt Augmenter** tab and click **Submit**.
+   - Optionally, send the prompts to Intruder to be used as Payloads
 
 2. **Witty Conversations**:
    - Select a request and send it to **Witty Conversations**.
@@ -101,10 +98,12 @@ cd /open_source_burp_extention_suite/ai_attack_api/red_team_api
 
 3. **Witty Transactions**:
    - In the Proxy tab, select requests and send them to **Witty Transactions** for analysis.
+   - Use any of the buttons at the bottom to extract information from a the group of HTTP requests and responses
 
 4. **Witty Analysis**:
    - Send requests to **Witty Analysis**.
    - Analyze, score, and benchmark results.
+   - Edit the HTTP request manually and Resend it to view results. 
 
 ## Credits
 
