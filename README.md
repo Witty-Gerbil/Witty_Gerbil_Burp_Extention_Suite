@@ -99,7 +99,6 @@ This repository contains a suite of Burp Suite extensions developed in Jython, d
 
 ## Credits
 
-- **Author**: Samuel Cameron
 - **Credit**: Witty Gerbil 🐹
 
 ## License
