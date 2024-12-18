@@ -22,12 +22,13 @@ class OptionAnalyzeRequest(BaseModel):
 
 # Prompts for various option analyses
 OPTION_PROMPTS = {
-    "guess_get_parameters": """You are a seasoned web security expert. Analyze the following HTTP REQUEST and propose 50 plausible GET parameters that might be interesting attack surface. Return them one per line.""",
-    "guess_post_parameters": """You are a seasoned web security expert. Analyze the following HTTP REQUEST and propose 50 plausible POST parameters that attackers/testers might try. Return them one per line.""",
-    "guess_endpoints": """You are a seasoned web security expert. Analyze the following HTTP REQUEST and propose 50 potential endpoint paths that might exist on the server. Return them one per line.""",
-    "guess_headers": """You are a seasoned web security expert. Analyze the following HTTP REQUEST and propose 50 HTTP headers that might be tested by attackers. Return them one per line.""",
-    "analyze_server_response": """You are a seasoned web security expert. Analyze the given HTTP REQUEST and RESPONSE to identify any suspicious or vulnerable behavior. Mention severity and potential exploit paths."""
+    "analyze_get_params": "You an expert web security analyst assigned to the red team. Analyze the following HTTP REQUEST and propose 50 plausible GET parameters that should be interesting attack surface. Return them one per line.",
+    "analyze_post_params": "You an expert web security analyst assigned to the red team. Analyze the following HTTP REQUEST and propose 50 plausible POST parameters that attackers/testers should try. Return them one per line.",
+    "find_endpoints": "You an expert web security analyst assigned to the red team. Analyze the following HTTP REQUEST and propose 50 potential endpoint paths that should exist on the server. Return them one per line.",
+    "check_headers": "You an expert web security analyst assigned to the red team Analyze the following HTTP REQUEST and propose 50 HTTP headers that should be tested by attackers. Return them one per line.",
+    "review_server_response": "You an expert web security analyst assigned to the red team. Analyze the given HTTP REQUEST and RESPONSE to identify any suspicious or vulnerable behavior. Detail severity and potential exploit paths giving clear examples and suggestios to help further the application testing."
 }
+
 
 # LangChain chat model
 chat = ChatOpenAI(

@@ -150,11 +150,11 @@ class BurpExtender(IBurpExtender, ITab, IHttpListener, IContextMenuFactory, List
         self.tabbedPane.addTab("Main Analysis", mainAnalysisPanel)
 
         option_text_mapping = {
-            "guess_get_parameters": "Suggest GET Parameters",
-            "guess_post_parameters": "Suggest POST Parameters",
-            "guess_endpoints": "Suggest Endpoints",
-            "guess_headers": "Suggest Headers",
-            "analyze_server_response": "Analyze Server Response"
+            "analyze_get_params": "Suggest GET Parameters",
+            "analyze_post_params": "Suggest POST Parameters",
+            "find_endpoints": "Suggest Endpoints",
+            "check_headers": "Suggest Headers",
+            "review_server_response": "Analyze Server Response"
         }
 
         for option_key, option_text in option_text_mapping.items():
