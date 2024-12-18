@@ -57,9 +57,14 @@ This repository contains a suite of Burp Suite extensions developed in Jython, d
    - Python 2.7 (for Jython compatibility)
    - Backend API (included in this repository) running on `http://localhost:8000`
 
-2. **Install Jython** in Burp Suite:
-   - Go to **Extender** > **Options**.
-   - Set **Python Environment** to your Jython 2.7 installation.
+2. **Download and import Jython standalone JAR file**:
+- Go to the Jython Downloads Page.
+- Download the standalone Jython .jar file (e.g., jython-standalone-2.7.4.jar).
+- Open Burp Suite.
+- Go to the Extensions tab in Burp Suite.
+- Under the Options tab, scroll down to the Python Environment section.
+- Click Select File, and choose the jython-standalone-2.7.4.jar file you just downloaded.
+- Click Apply to load the Jython environment into Burp Suite.
 
 3. **Load the Extensions**:
    - Go to **Extender** > **Extensions**.
